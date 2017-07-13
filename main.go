@@ -44,7 +44,7 @@ func main() {
 
 func run(args []string) error {
 	fs := flag.NewFlagSet("hackerbeeper", flag.ContinueOnError)
-	song := flag.String("song", "bumblebees", "song name")
+	song := fs.String("song", "bumblebees", "song name")
 	if err := fs.Parse(args); err != nil {
 		return err
 	}
